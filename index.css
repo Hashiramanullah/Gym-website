@@ -1,0 +1,621 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+  
+  *{
+      color: #fff;
+      padding: 0;
+    margin: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+    outline: none;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  :root{
+      --prime:#00ff34;
+    }
+    
+    body{
+        background-color: #131b2b;
+    }
+    
+    
+    /* style nabvar */
+    .navbar{
+        width: 100%;
+        display: flex;
+        position: fixed;
+        padding: 30px 120px;
+        background-color: transparent;
+        justify-content: space-between;
+        z-index: 9;
+        transition: 0.5s ease-in-out;
+    }
+    .navbar.sticky{
+        padding: 6px 60px;
+        background: #0f0f0f;
+        box-shadow: 0 0 15px rgb(0,0,0,0.5);
+    }
+    .navbar.sticky .logo,
+.navbar.sticky ul li a{
+    font-size: 2em;
+    color: var(--prime);
+}
+    .logo{
+        font-size: 2.8rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .navbar ol{
+        position: relative;
+    }
+    .navbar ol li::before{
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        width: 0;
+        height: 3%;
+background-color: var(--prime);
+    }
+    .navbar ol li:hover{
+        width: 90%;
+    }
+    .logo b{
+        color: var(--prime);
+    }
+    ol{
+        display: flex;
+        margin: auto 0;
+
+    }
+    ol li{
+        list-style-type: none;
+   margin-right: 20px;
+    }
+    ol li a{
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+    ol li a:hover{
+        color: var(--prime);
+    }
+
+
+     /* common size for all section */
+    .view{
+        width: 100%;
+        min-height: 80vh;
+        position: relative;
+    }
+
+
+    /* Style Home Section */
+
+    .home{
+        display: flex;
+        min-height: 120vh;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(0 0,100% 0,100% 100%,80% 95%,0 100% );
+    }
+    .banner{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: url(artistic-portrait-shirtless-muscular-male-with-burning-dumbbell.jpg);
+         background-position: center;
+         background-size: cover;
+         opacity: 0.5;
+    }
+
+    .highlight{
+        width: 70%;
+        position: relative;
+        display: inline-block;
+        z-index: 22;
+    }
+    .highlight h3{
+        display: inline;
+        font-size: 2vw;
+        padding: 5px 20px;
+        font-weight: lighter;
+        text-transform: capitalize;
+         border-left: 6px solid var(--prime);
+    }
+    .highlight h1{
+        font-size: 9vw;
+        text-align: center;
+        font-weight: normal;
+    }
+    .highlight b{
+        color: var(--prime);
+        font-weight: 800;
+        font-family: sans-serif;
+        
+    }
+    .highlight .tagline{
+        color: #d7d7d7;
+        font-weight: 1.2vw;
+        text-align: center;
+        font-weight: normal;
+
+    }
+    .highlight .join{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 800;
+        padding: 5px 20px;
+        font-size: 1.5vw;
+        margin-top: 1.2rem;
+        color: var(--prime);
+        border: 2px solid var(--prime);
+        border-radius: 50px;
+        background-color: transparent;
+        text-transform: uppercase;
+        transition: 0.3% ease; 
+    }
+    .highlight .join:hover{
+        color: #ffff;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+        background: var(--prime);
+    }
+    .main{
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .main h2{
+        font-size: 2.5vw;
+        position: relative;
+        text-align: center;
+        padding-top: 100px;
+        display: inline-block;
+    }
+    span{
+        color: var(--prime);
+    }
+    .main h2::before{
+        position: absolute;
+        content: "";
+        background: var(--prime);
+        height: 3px;
+        width: 30%;
+        right: -15px;
+        bottom: 0;
+        border-radius: 50px;
+    }
+    .main h6{
+        margin-top: 10px;
+        font-size: 13px;
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+    .content{
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding: 0 30px;
+        justify-content: center;
+    }
+
+    /* style about section */
+
+    .about .content .cols{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px 70px;
+    }
+    .about .content .cols p b{
+        font-size: 20px;
+        margin-right: 2px;
+    }
+
+    .about .content .cols a{
+        position: relative;
+        top: 20px;
+        color: #fff;
+        background: var(--prime);
+        padding: 5px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .about .content .cols a:hover{
+        color: #000;
+        background: #fff;
+
+    }
+    .about .content .cols .box{
+        position: relative;
+        height: 550px;
+        box-shadow: 0 10px 10px rgb(0,0,0,0.5);
+    }
+    .about .content .cols .box img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    /* style workout section */
+
+    .workout .content{
+        flex-wrap: wrap;
+    }
+    .workout .content .frame{
+        position: relative;
+        width: 350px;
+        padding: 20px;
+        margin: 10px;
+        background: #222;
+        box-shadow: 0 10px 15px rgba(0, 0, 0,0.5);
+    }
+    .workout .content .frame .box{
+        position: relative;
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .workout .content .frame .box img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(80%);
+        transition: 0.2s ease-in;
+    }
+    .workout .content .frame .box:hover img{
+        filter: brightness(100%);
+        /* background-color: #00ff34; */
+        transform: scale(1.08);
+    }
+    .workout .content .frame .title{
+        color: var(--prime);
+        padding: 5px 0;
+    }
+    .workout .content .frame p{
+        font-size: 0.8rem;
+    }
+    /* style trainer section */
+    .trainers  .content{
+        flex-wrap: wrap;
+    }
+    .trainers  .content .frame{
+        position: relative;
+        width: 500px;
+        padding: 30px 30px 40px 30px;
+         box-shadow: 0 10px 15px rgb(0,0,0,0.5);
+      margin: 10px;
+      background: #222;
+    }
+    .trainers .content .frame .box{
+        position: relative;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .trainers .content .frame .box img{
+        position: absolute;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.2s ease;
+        filter: grayscale(1);
+    }
+    .trainers .content .frame .box:hover img{
+        filter: grayscale(0);
+        transform: scale(1.08);
+    }
+    .trainers .content .frame .headline{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8px 0;
+    }
+    .trainers .content .frame .headline i{
+        line-height: 22px;
+        height: 22px;
+        width: 22px;
+        border: 1.5px solid #fff;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 12px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    .trainers .content .frame .headline i:hover{
+        border: 1.5px solid var(--prime);
+        background: var(--prime);
+    }
+    .trainers .content .frame .headline .title{
+        color: var(--prime);
+        font-size: 1.2rem;
+    }
+    .trainers .content .frame p{
+        font-size: 0.9em;
+        position: relative;
+        bottom: 5px;
+    }
+    .trainers .content .frame a{
+        top: 20px;
+        color: var(--prime);
+        background: transparent;
+        padding: 5px 20px;
+        border: 1.5px solid var(--prime);
+        border-radius: 5px;
+        position: relative;
+        text-transform: capitalize;
+        transform: 0.2s;
+    }
+    .trainers .content .frame a:hover{
+        color: #fff;
+        background: var(--prime);
+    }
+    .diet .content {
+        flex-direction: column;
+    }
+    
+    .diet .content .row:nth-child(odd) .a{
+        order: 2;
+    }
+    .diet .content .row:nth-child(even)  .cols .heading{
+        color: rgba(58, 138, 242, 0.85);
+    }
+    .diet .content .row{
+        display: flex;
+        position: relative;
+        width: 100%;
+        padding: 20px 0;
+        justify-content: center;
+    }
+    .diet .content .row .cols{
+        position: relative;
+        width: 600px;
+        padding: 20px 50px;
+    }
+    .diet .content .row .cols .heading{
+        font-size: 2em;
+        color: #ff8502;
+
+    }
+    .diet .content .row .cols .box{
+        position: relative;
+        width: 100%;
+        height: 350px;
+        padding: 20px;
+        border-radius: 8px;
+        background: #ffff;
+        box-shadow: 0 10px 15px rgb(0,0,0,0.5);
+    }
+    .diet .content .row .cols .box img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* style contact section */
+
+    .contact .content{
+        min-height: 100vh;
+
+    }
+    .contact .content form{
+     z-index: 1;
+        margin: auto 0;
+        width: 400px;
+        height: 500px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 10px 15px rgb(0,0,0,0.5);
+    }
+    .contact .content form input{
+        color: #000;
+        width: 100%;
+        height: 50px;
+        padding: 0 10px;
+        font-size: 18px;
+        border: 1px solid #878787;
+        border-radius: 4px;
+        margin: 15px 0;
+        background: transparent;
+    }
+    .contact .content form textarea{
+        width: 100%;
+        padding: 10px;
+        color: #000;
+        font-size: 18px;
+        border: 1px solid #878787;
+        border-radius: 4px;
+        margin: 15px 0;
+        background: transparent;
+    }
+    .contact .content form input:focus,
+    .contact .content form textarea:focus{
+        border: 2px solid var(--prime);
+        transition: 0.1s ease;
+    }
+    .contact .content form .btn{
+        letter-spacing: 1px;
+        width: 100px;
+        display: inline-block;
+        color: var(--prime);
+        border:2px  solid var(--prime);
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+    .contact .content form .btn:hover{
+        background-color: var(--prime);
+        color: #fff;
+    }
+     .bgimg{
+/* z-index: 99; */
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url(pexels-victor-freitas-949132.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: brightness(20%);
+    }
+    @media (max-width:900px){
+
+        .navbar{
+            padding: 10 60px;
+        }
+        .navbar ol{
+            display: none;
+        }
+        #openSideBarMenu:checked ~ #showOff{
+            top: 60px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            position: fixed;
+            background: #222;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: calc(100% - 60px);
+        }
+        #openSideBarMenu:checked ~ #showOff li{
+            margin: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #openSideBarMenu:checked ~ #showOff li a{
+            font-size: 25px;
+        }
+        .navbar .toggle{
+            height: 25px;
+            width: 25px;
+            margin: auto 0;
+            cursor: pointer;
+        }
+
+.logo{
+    /* position: relative;
+    right: 90px;
+    bottom: 20px; */
+}
+
+        #showOff{
+            display: none;
+        position: relative;
+        }
+        #openSideBarMenu{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 30px;
+            z-index: 9;
+  display: none;
+        }
+        #openSideBarMenu{
+            display: none;
+        }
+        .toggle-icon{
+            width: 30px;
+            height: 30px;
+            /* background-color: #00ff34; */
+            position: absolute;
+            right: 30px;
+            z-index: 20;
+        }
+        #openSideBarMenu:checked ~ #showOff{
+            display: block;
+        }
+        .spinner{
+            height: 9px;
+            background: var(--prime);
+            transition: all 0.3s;
+        }
+        .spinner.middle,
+        .spinner.bottom{
+            margin-top: 8%;
+        }
+         #openSideBarMenu:checked ~ .toggle-icon .spinner.middle{
+            opacity: 0;
+         } 
+         #openSideBarMenu:checked ~ .toggle-icon .spinner.bottom{
+            opacity: 1;
+            transform: rotate(60deg);
+            
+         }
+         #openSideBarMenu:checked ~ .toggle-icon .spinner.front{
+            opacity: 1;
+            transform: rotate(-360deg);
+            
+         }
+         .highlight h3{
+    font-size: 3vw;
+    padding: 5px 10px;
+    border-left: 3px solid var(--prime);
+         }
+         .highlight h1{
+            font-size: 16vw;
+         }
+         .highlight .join{
+            font-size: 1.8vw;
+            border: 1px solid var(--prime);
+         }
+         .main h2{
+            font-size: 1.5rem;
+         }
+         .main h6{
+            font-size: 10px;
+         }
+         .about .content{
+            flex-direction: column;
+         }
+         .workout .content .frame{
+            width: 260px;
+            padding: 18px;
+         }
+         .trainers .content .frame{
+            width: 350px;
+            padding: 15px 15px 40px 15px;
+          margin: 10px 5px; 
+        }
+.trainers .content .frame .box{
+    height: 200px;
+}
+ .trainers .content .frame a{
+    border: 1.5px solid var(--prime);
+    padding: 3px 15px ;
+ }
+ .diet .content .row{
+    flex-direction: column;
+ }
+.diet .content .row .cols{
+    width: 100%;
+}
+
+ .diet .content .row:nth-child(odd) .a{
+  order: 0;
+ }
+ .diet .content .row .cols .heading{
+    font-size: 1.5em;
+ }
+ .diet .content .row .cols p{
+    font-size: 13px;
+ }
+ .diet .content .row .cols .boxes{
+    width: 90%;
+    margin: auto;
+ }
+    }
